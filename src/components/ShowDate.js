@@ -1,9 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../styles/device";
 
 const Container = styled.div`
   color: #5b5656;
   opacity: 0.7;
+
+  @media ${device.mobileS} {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @media ${device.tablet} {
+    text-align: center;
+  }
 `;
 
 const ShowDate = ({ date }) => {

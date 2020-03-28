@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import useStats from "../utils/useStats";
 import CardDetails from "./CardDetails";
+import { device } from "../styles/device";
 
 const Card = styled.div`
 height: 400px;
@@ -16,6 +17,47 @@ top: 50%;
 margin: 100px auto;
 box-shadow: 5px 5px 3px black;
 background-color: white;
+
+@media ${device.mobileS} {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 300px;
+    height: 450px;
+  };
+
+  @media ${device.mobileM} {
+      max-width: 350px;
+      width: 300px;
+  }
+
+  @media ${device.mobileL} {
+      width: 414px;
+  }
+
+@media ${device.tablet} {
+    max-width: 768px;
+    width: 400px;
+  }
+
+@media ${device.laptop} {
+    max-width: 800px;
+    width: 400px;
+  }
+
+  @media ${device.laptopL} {
+    max-width: 1440px;
+    width: 500px;
+    height: 400px;
+  }
+
+@media ${device.desktop} {
+    max-width: 2560px;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
 `;
 
 const Title = styled.h1`

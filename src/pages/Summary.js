@@ -5,11 +5,60 @@ import CountryCard from "../components/CountryCard";
 import AsyncSelector from "../components/AsyncSelector";
 import styled from "styled-components";
 import ShowDate from "../components/ShowDate";
+import { device } from "../styles/device";
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
+
+  @media ${device.mobileS} {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+  }
+
+  @media ${device.mobileM} {
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+  }
+
+  @media ${device.mobileL} {
+    display: flex;
+    flex-direction: column;
+    max-width: 414px;
+  }
+  @media (max-width) {
+    display: flex;
+    flex-direction: column;
+    max-width: 414px;
+  }
+
+  @media ${device.tablet} {
+    display: grid;
+    grid-template-columns: auto;
+    max-width: 760px;
+  }
+
+  @media ${device.laptop} {
+    max-width: 1000px;
+  }
+
+  @media ${device.laptopL} {
+    max-width: 1440px;
+  }
+
+  @media ${device.desktop} {
+    max-width: 1600px;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+  @media ${device.desktopL} {
+    max-width: 1750px;
+
 `;
 
 const Header = styled.h1`
@@ -30,7 +79,7 @@ const Summary = () => {
 
   return (
     <Grid>
-      <Header>Covid-19 Tracker</Header>
+      <Header>COVID-19 Tracker</Header>
       <CountrySelector setSelectedState={setSelectedState} countries={stats} />
       <br />
       <CountryCard selectedState={selectedState} />
