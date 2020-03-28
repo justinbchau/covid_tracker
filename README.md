@@ -8,4 +8,4 @@
 - Hooks
 - Styled Components
 
-# [Click here for the used API](covid19api.com)
+# [Click here for the used API](httpds://covid19api.com)
