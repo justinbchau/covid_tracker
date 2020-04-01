@@ -9,8 +9,10 @@ import { device } from "../styles/device";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1;
   justify-content: center;
+  justify-items: center;
+  align-content: center;
 
   @media ${device.mobileS} {
     display: flex;
@@ -57,8 +59,11 @@ const Grid = styled.div`
   }
 
   @media ${device.desktopL} {
-    max-width: 1750px;
-
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    margin: 0 auto;
+  }
 `;
 
 const Header = styled.h1`
@@ -66,6 +71,10 @@ const Header = styled.h1`
   text-align: center;
   font-size: 3rem;
   color: #639a67;
+
+  @media ${device.desktop} {
+    margin-top: 5rem;
+  }
 `;
 
 const Summary = () => {
@@ -82,7 +91,14 @@ const Summary = () => {
       <Header>COVID-19 Tracker</Header>
       <CountrySelector setSelectedState={setSelectedState} countries={stats} />
       <br />
-      <CountryCard selectedState={selectedState} />
+      <div
+        style={{
+          display: `flex`,
+          justifyContent: `center`
+        }}
+      >
+        <CountryCard selectedState={selectedState} />
+      </div>
       <ShowDate date={stats.Date} />
     </Grid>
   );

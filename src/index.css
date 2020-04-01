@@ -1,7 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  font: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-style: bold;
+  box-sizing: border-box;
 }
 
 body {
@@ -9,4 +11,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #faf4f4;
+}
+
+html {
+  min-height: 100vh;
 }

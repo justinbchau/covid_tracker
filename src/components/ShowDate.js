@@ -10,6 +10,11 @@ const Container = styled.div`
     text-align: center;
     margin-bottom: 20px;
   }
+  @media ${device.mobileS} {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 20px;
+  }
 
   @media ${device.tablet} {
     text-align: center;

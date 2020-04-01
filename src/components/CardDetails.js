@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../styles/device";
 
 const Container = styled.div`
   display: flex;
@@ -11,6 +12,13 @@ const Container = styled.div`
 const List = styled.div`
   margin-top: 10px;
   font-size: 2rem;
+
+  @media ${device.mobileS} {
+    margin: auto;
+  }
+  @media ${device.mobileM} {
+    margin: auto;
+  }
 `;
 
 const ListItem = styled.h5`
